@@ -1,8 +1,8 @@
 # Gomoku
-
+Nikhil Sutliff - Week 2 of Dev10 Program
 ## High-Level
 
-Create a user interface for existing Gomoku game classes by adding new Java classes and methods. _Existing_ Gomoku classes cover all game rules. _New_ code collects user input and displays feedback. It is user interface only.
+ User interface for pre-provided Gomoku game classes by adding new Java classes and methods._Existing_ Gomoku classes cover all game rules. _New_ code collects user input and displays feedback. It is user interface only.
 
 ## Requirements
 
@@ -13,13 +13,6 @@ Create a user interface for existing Gomoku game classes by adding new Java clas
 - Re-prompt on failed placement. The game must not proceed until a player has made a valid move. (It's not necessary to add a secondary, inner loop. The overall game loop may be sufficient.)
 - Display the final result of the game.
 - Give the option to play again.
-
-## Technical Requirements
-
-- All rules are modeled inside the `Gomoku` class. You may not modify `Gomoku`, `Player`, `HumanPlayer`, `RandomPlayer`, `Stone`, or `Result`.
-- Add your code to the project provided. Be sure to use sensible class names, method names, and packages.
-- At least one class beyond the `App` class is required.
-- Stones use 0-based rows and columns.
 
 ## Steps
 
@@ -36,23 +29,15 @@ Create a user interface for existing Gomoku game classes by adding new Java clas
 
     - Display a "(Randomizing)" message.
 
-    - Display the player who goes first. (The game tracks the current player: `game.getCurrent().getName()`.)
+    - Display the player who goes first. (The game tracks the current player.)
 
 3. Play a full game.
 
     - Repeat until the game is over:
-        1. Display the board.
-        2. Display who's turn it is: `game.getCurrent().getName()`.
-        3. Generate a stone/move from the current player: `Stone stone = game.getCurrent().generateMove(game.getStones());`
-        4. If `stone` is `null`, the player must be a human. Collect a row and column from the user. Use the row and column to instantiate a `Stone` object.
-        5. If `stone` is not `null`, the player must be random. Use the `stone` in the step below.
-        6. Place the stone and capture the result: `Result result = game.place(stone);`
-        7. Display the result if it's not successful.
-        8. Check if the game is over. If it is, exit the main game loop.
-
+       
     - Display the final board.
-    - If there's a winner, display them: `game.getWinner().getName()`.
-    - If it's a draw (`game.getWinner() == null`), display it.
+    - If there's a winner, display them.
+    - If it's a draw display it.
 
 4. Ask the user if they want to play again. If yes, back to major step 2. If not, exit.
 
